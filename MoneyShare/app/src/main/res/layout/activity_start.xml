@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".StartActivity">
+
+
+    <ImageView
+        android:id="@+id/LogoImageView"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="126dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="#3252f4" />
+
+    <TextView
+        android:id="@+id/TitleTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="62dp"
+        android:layout_marginTop="30dp"
+        android:text="공그미"
+        android:textColor="#282828"
+        android:textSize="45sp"
+        android:textStyle="bold"
+        android:typeface="sans"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/LogoImageView" />
+
+    <TextView
+        android:id="@+id/SubtitleTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="한눈에 보는 공금 관리 가계부"
+        android:textColor="#7c7c7c"
+        android:textSize="14sp"
+        android:textStyle="normal"
+        android:typeface="sans"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TitleTextView" />
+
+    <Button
+        android:id="@+id/AdminButton"
+        android:layout_width="184dp"
+        android:layout_height="32dp"
+        android:layout_marginTop="112dp"
+        android:background="#3252f4"
+        android:onClick="onAdminButtonClicked"
+        android:text="관리자로 들어가기"
+        android:textColor="@android:color/background_light"
+        android:typeface="sans"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/SubtitleTextView" />
+
+    <Button
+        android:id="@+id/MemberButton"
+        android:layout_width="184dp"
+        android:layout_height="32dp"
+        android:background="@android:color/background_light"
+        android:text="참가자로 들어가기"
+        android:textColor="#22418f"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/AdminButton" />
+</android.support.constraint.ConstraintLayout>
