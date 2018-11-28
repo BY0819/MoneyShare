@@ -1,0 +1,77 @@
+package com.example.vmfld.moneyshare;
+
+import android.content.Context;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.BaseAdapter;
+import android.widget.TextView;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class DivideListAdapter  extends BaseAdapter {
+
+    private ArrayList<DivideData> divideDataList = new ArrayList<>();
+
+    @Override
+    public int getCount() {
+        return divideDataList.size();
+    }
+
+    @Override
+    public Object getItem(int position) {
+        return divideDataList.get(position);
+    }
+
+    @Override
+    public long getItemId(int position) {
+        return position;
+    }
+
+    @Override
+    public View getView(int position, View convertView, ViewGroup parent) {
+
+       Context context = parent.getContext();
+
+       if(convertView == null){
+           LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+           convertView = inflater.inflate(R.layout.content_divide,parent,false);
+       }
+
+
+       TextView str_i_name = (TextView) convertView.findViewById(R.id.str_i_name);
+       TextView str_i_publicprice = (TextView) convertView.findViewById(R.id.str_i_publicprice);
+       TextView str_i_personalprice = (TextView) convertView.findViewById(R.id.str_i_personalprice);
+       TextView str_i_personal = (TextView) convertView.findViewById(R.id.str_i_personal);
+       TextView str_i_leftprice = (TextView) convertView.findViewById(R.id.str_i_leftprice);
+
+        DivideData divideData = (DivideData) getItem(position);
+
+       str_i_name.setText(divideData.getName());
+       str_i_publicprice.setText(Integer.toString(divideData.getPublicused()));
+       if(divideData.getPersonalused() != 0) {
+           str_i_personal.setText("개인사용액");
+           str_i_personalprice.setText(Integer.toString(divideData.getPersonalused()));
+       }
+       else{
+           str_i_personal.setText("");
+           str_i_personalprice.setText("");
+       }
+
+       str_i_leftprice.setText(Integer.toString(divideData.getGetpermoney()));
+
+
+        return convertView;
+
+
+    }
+
+    public void addItem(String name, int personalused, int publicused, int totalleft, int personaltotalused, int memnum){
+
+        DivideData divideData = new DivideData(name, personalused,publicused,totalleft,personaltotalused,memnum);
+
+        divideDataList.add(divideData);
+
+    }
+}
