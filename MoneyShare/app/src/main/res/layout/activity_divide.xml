@@ -50,46 +50,68 @@
             android:layout_height="wrap_content"
             android:background="#3252f4"
             android:gravity="center"
-            android:orientation="vertical"
->
+            android:orientation="vertical">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_marginTop="5dp"
+                android:layout_marginTop="15dp"
                 android:gravity="center"
                 android:text="남은 공금"
                 android:textAlignment="center"
                 android:textColor="@android:color/background_light"
-                android:textSize="20sp"
-                android:typeface="sans"/>
+                android:textSize="15sp"
+                android:typeface="sans"
+                android:textStyle="bold"/>
 
-            <TextView
-                android:id="@+id/str_i_totalleft"
+            <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginBottom="5dp"
-                android:text="286,500원"
-                android:textAlignment="center"
-                android:textColor="@android:color/background_light"
-                android:textSize="30sp"
-                android:typeface="sans"/>
+                android:orientation="horizontal"
+                android:layout_marginBottom="15dp">
+
+                <TextView
+                    android:id="@+id/str_i_totalleft"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="286,500"
+                    android:textAlignment="center"
+                    android:textColor="@android:color/background_light"
+                    android:textSize="25sp"
+                    android:typeface="sans"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="5dp"
+                    android:text="원"
+                    android:textAlignment="center"
+                    android:textColor="@android:color/background_light"
+                    android:textSize="25sp"
+                    android:typeface="sans"
+                    android:textStyle="bold"/>
+            </LinearLayout>
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="16dp" />
     </LinearLayout>
-        <ListView
-            android:id="@+id/divideListView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin ="10dp"
-            android:layout_gravity="left"
-            android:divider="#ffffff"
-            android:dividerHeight="10dp"/>
+
+    <ListView
+        android:id="@+id/divideListView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_gravity="left"
+        android:divider="#000000"
+        android:dividerHeight="0.5dp" />
 
 
 </LinearLayout>

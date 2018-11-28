@@ -49,17 +49,17 @@ public class DivideListAdapter  extends BaseAdapter {
         DivideData divideData = (DivideData) getItem(position);
 
        str_i_name.setText(divideData.getName());
-       str_i_publicprice.setText(Integer.toString(divideData.getPublicused()));
+       str_i_publicprice.setText(divideData.getstrPublicused());
        if(divideData.getPersonalused() != 0) {
            str_i_personal.setText("개인사용액");
-           str_i_personalprice.setText(Integer.toString(divideData.getPersonalused()));
+           str_i_personalprice.setText(divideData.getstrPersonalused());
        }
        else{
            str_i_personal.setText("");
            str_i_personalprice.setText("");
        }
 
-       str_i_leftprice.setText(Integer.toString(divideData.getGetpermoney()));
+       str_i_leftprice.setText(divideData.getstrGetpermoney());
 
 
         return convertView;

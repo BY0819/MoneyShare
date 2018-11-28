@@ -13,8 +13,6 @@ public class DivideData {
     private int memnum;
     private int personaltotalused;
 
-    public DivideData() {
-    }
 
     public DivideData(String name, int personalused, int publicused, int totalLeft, int personaltotalused, int memnum) {
         this.name = name;
@@ -33,49 +31,45 @@ public class DivideData {
         this.name = name;
     }
 
-    public void setGetpermoney(int getpermoney) {
-        this.getpermoney = getpermoney;
-    }
-
-    public int getPersonalused() {
+    public int getPersonalused(){
         return personalused;
     }
-
-    public void setPersonalused(int personalused) {
-        this.personalused = personalused;
+    public String getstrPersonalused() {
+        String str_personalused = makeComma(personalused);
+        return str_personalused;
     }
 
-    public int getPersonaltotalused() {
-        return personaltotalused;
+    public String getstrPublicused() {
+        String str_publicused = makeComma(publicused);
+        return str_publicused;
     }
 
-    public void setPersonaltotalused(int personaltotalused) {
-        this.personaltotalused = personaltotalused;
-    }
-
-    public int getPublicused() {
-        return publicused;
-    }
-
-    public void setPublicused(int publicused) {
-        this.publicused = publicused;
-    }
-
-    public int getTotalLeft() {
-        return totalLeft;
-    }
-
-    public void setTotalLeft(int totalLeft) {
-        this.totalLeft = totalLeft;
-    }
-
-    public int getGetpermoney(){
+    public String getstrGetpermoney(){
 
         if(getpermoney == 0){
             getpermoney = ((totalLeft + personaltotalused) / memnum) - personalused;
         }
 
-        return getpermoney;
+        String str_getpermoney = makeComma(getpermoney);
+        return str_getpermoney;
+    }
+
+    private String makeComma(int num){
+        String str_num =Integer.toString(num);
+
+        if(num>999){
+            if(num%1000 == 0){
+                str_num = "," + "000";
+            }
+            else{
+                str_num = "," +  Integer.toString(num % 1000);
+            }
+            return makeComma(num/1000) + str_num;
+        }
+        else{
+            return Integer.toString(num);
+        }
+
     }
 
 }

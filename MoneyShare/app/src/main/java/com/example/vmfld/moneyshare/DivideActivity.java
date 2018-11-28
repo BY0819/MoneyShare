@@ -4,6 +4,7 @@ import android.content.Context;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -21,6 +22,13 @@ public class DivideActivity extends AppCompatActivity {
         DivideDataListView = (ListView)findViewById(R.id.divideListView);
 
         dataSetting();
+
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true); // Create BackButton
+        getSupportActionBar().setDisplayShowTitleEnabled(false); // Remove Real Title
+
 
     }
 
@@ -41,7 +49,7 @@ public class DivideActivity extends AppCompatActivity {
 
 
         TextView str_i_totalleft = (TextView)findViewById(R.id.str_i_totalleft);
-        str_i_totalleft.setText(Integer.toString(90000));
+        str_i_totalleft.setText("90,000");
 
         DivideDataListView.setAdapter(divideListAdapter);
     }

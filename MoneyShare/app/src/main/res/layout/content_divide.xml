@@ -4,7 +4,9 @@
     android:layout_height="match_parent"
     android:layout_width="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="horizontal">
+    android:orientation="horizontal"
+    android:paddingTop="20dp"
+    android:paddingBottom="20dp">
 
     <RelativeLayout
         android:layout_width="wrap_content"
@@ -39,12 +41,12 @@
     </RelativeLayout>
 
     <LinearLayout
-        android:layout_width="304dp"
-        android:layout_height="80dp"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
         android:orientation="vertical"
         android:layout_weight="40"
         android:paddingLeft="88dp"
-        android:paddingRight="16dp">
+        android:paddingRight="10dp">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -59,19 +61,21 @@
                 android:orientation="vertical">
 
                 <TextView
+                    android:id="@+id/str_i_personal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="10dp"
+                    android:paddingLeft="20dp"
+                    android:text="개인사용액"
+                    android:typeface="sans"/>
+
+                <TextView
                     android:id="@+id/str_i_public"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:paddingLeft="20dp"
-                    android:paddingTop="10dp"
-                    android:text="공금사용액" />
-
-                <TextView
-                    android:id="@+id/str_i_personal"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:paddingLeft="20dp"
-                    android:text="개인사용액" />
+                    android:text="공금사용액"
+                    android:typeface="sans"/>
 
             </LinearLayout>
 
@@ -82,21 +86,23 @@
                 android:orientation="vertical">
 
                 <TextView
-                    android:id="@+id/str_i_publicprice"
+                    android:id="@+id/str_i_personalprice"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="right"
                     android:paddingTop="10dp"
                     android:paddingRight="15dp"
-                    android:text="공적사용금액" />
+                    android:text="사적사용금액"
+                    android:typeface="sans"/>
 
                 <TextView
-                    android:id="@+id/str_i_personalprice"
+                    android:id="@+id/str_i_publicprice"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="right"
                     android:paddingRight="15dp"
-                    android:text="사적사용금액" />
+                    android:text="공적사용금액"
+                    android:typeface="sans"/>
 
             </LinearLayout>
         </LinearLayout>
@@ -111,26 +117,31 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="0.5"
+                android:paddingTop="10dp"
                 android:paddingLeft="10dp"
-                android:textSize="18dp"
+                android:textSize="20dp"
                 android:textColor="#3252f4"
                 android:textStyle="bold"
                 android:gravity="right"
-                android:text="남은 금액" />
+                android:text="남은 금액"
+                android:typeface="sans"/>
 
             <TextView
                 android:id="@+id/str_i_leftprice"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="0.5"
+                android:paddingTop="10dp"
                 android:paddingRight="15dp"
-                android:textSize="18dp"
+                android:textSize="20dp"
                 android:textColor="#3252f4"
                 android:textStyle="bold"
                 android:gravity="right"
-                android:text="분할금액" />
+                android:text="분할금액"
+                android:typeface="sans"/>
 
         </LinearLayout>
+
 
     </LinearLayout>
 </android.support.constraint.ConstraintLayout>
