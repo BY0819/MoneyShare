@@ -12,7 +12,7 @@
         android:layout_width="wrap_content"
         android:layout_height="80dp"
         android:layout_weight="1"
-        android:paddingLeft="0dp">
+        android:paddingLeft="8dp">
 
         <ImageView
             android:id="@+id/person_img"
@@ -35,8 +35,9 @@
             android:paddingLeft="16dp"
             android:text="아영"
             android:textColor="@color/colorWhite"
-            android:textSize="20dp"
-            android:typeface="sans" />
+            android:textSize="18dp"
+            android:typeface="sans"
+            android:textStyle="bold"/>
 
     </RelativeLayout>
 
@@ -46,7 +47,7 @@
         android:orientation="vertical"
         android:layout_weight="40"
         android:paddingLeft="88dp"
-        android:paddingRight="10dp">
+        android:paddingRight="8dp">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -85,60 +86,107 @@
                 android:layout_weight="0.5"
                 android:orientation="vertical">
 
-                <TextView
-                    android:id="@+id/str_i_personalprice"
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:gravity="right"
-                    android:paddingTop="10dp"
-                    android:paddingRight="15dp"
-                    android:text="사적사용금액"
-                    android:typeface="sans"/>
+                    android:layout_marginRight="15dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_gravity="right"
+                    android:gravity="right">
 
-                <TextView
-                    android:id="@+id/str_i_publicprice"
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:text="-"
+                        android:typeface="sans"/>
+
+                    <TextView
+                        android:id="@+id/str_i_personalprice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:paddingRight="8dp"
+                        android:text="2,000"
+                        android:typeface="sans"/>
+
+                </LinearLayout>
+
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:gravity="right"
-                    android:paddingRight="15dp"
-                    android:text="공적사용금액"
-                    android:typeface="sans"/>
+                    android:layout_marginRight="15dp"
+                    android:layout_gravity="right"
+                    android:gravity="right">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:text="-"
+                        android:typeface="sans"/>
+
+                    <TextView
+                        android:id="@+id/str_i_publicprice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:paddingRight="8dp"
+                        android:text="45,000"
+                        android:typeface="sans"/>
+
+                </LinearLayout>
 
             </LinearLayout>
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp">
 
             <TextView
                 android:id="@+id/str_i_left"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="0.5"
-                android:paddingTop="10dp"
                 android:paddingLeft="10dp"
                 android:textSize="20dp"
-                android:textColor="#3252f4"
+                android:textColor="#22418f"
                 android:textStyle="bold"
                 android:gravity="right"
                 android:text="남은 금액"
                 android:typeface="sans"/>
 
-            <TextView
-                android:id="@+id/str_i_leftprice"
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="0.5"
-                android:paddingTop="10dp"
-                android:paddingRight="15dp"
-                android:textSize="20dp"
-                android:textColor="#3252f4"
-                android:textStyle="bold"
-                android:gravity="right"
-                android:text="분할금액"
-                android:typeface="sans"/>
+                android:layout_marginRight="15dp"
+                android:gravity="right">
+
+                <TextView
+                    android:id="@+id/str_i_leftprice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="20dp"
+                    android:textColor="#22418f"
+                    android:textStyle="bold"
+                    android:text="33,000"
+                    android:typeface="sans"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingRight="8dp"
+                    android:textSize="20dp"
+                    android:textColor="#22418f"
+                    android:text="원"
+                    android:textStyle="bold"
+                    android:typeface="sans"/>
+
+            </LinearLayout>
 
         </LinearLayout>
 

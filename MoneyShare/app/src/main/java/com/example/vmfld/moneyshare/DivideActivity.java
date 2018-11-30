@@ -39,13 +39,14 @@ public class DivideActivity extends AppCompatActivity {
         int[] personalusedlist = {3000,27000,0};
         int personaltotalused = 0;
         int memnum = personalusedlist.length;
+
         for(int i = 0; i< personalusedlist.length; i++){
             personaltotalused = personaltotalused +personalusedlist[i];
         }
 
-        divideListAdapter.addItem("김유빈", 27000,450000,90000, personaltotalused,memnum);
-        divideListAdapter.addItem("유지현", 3000,450000,90000, personaltotalused,memnum);
-        divideListAdapter.addItem("안아영", 0,450000,90000, personaltotalused,memnum);
+        divideListAdapter.addItem("김유빈", 27000,150000,90000, personaltotalused,memnum);
+        divideListAdapter.addItem("유지현", 3000,150000,90000, personaltotalused,memnum);
+        divideListAdapter.addItem("안아영", 0,150000,90000, personaltotalused,memnum);
 
 
         TextView str_i_totalleft = (TextView)findViewById(R.id.str_i_totalleft);
