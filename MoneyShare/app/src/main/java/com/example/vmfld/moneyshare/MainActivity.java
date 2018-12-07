@@ -67,7 +67,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onRoom5Clicked (View v){
-        Intent intent = new Intent(this, GalleryActivity.class);
+        Intent intent = new Intent(this, DivideActivity.class);
         startActivity(intent);
     }
 
