@@ -1,5 +1,8 @@
 package com.example.vmfld.moneyshare;
 
+import com.google.gson.annotations.SerializedName;
+
+
 public class DivideData {
 
     //보내야 하는 값
@@ -7,13 +10,41 @@ public class DivideData {
     private int getpermoney;
     private int personalused;
     private int publicused;
-    private int totalLeft;
 
     //계산을 위해 필요한 값
     private int memnum;
     private int personaltotalused;
 
+    /** 서버 통신 데이터  **/
+    @SerializedName("result")
+        private String result = null;
+    @SerializedName("sumUsage")
+        private Integer publicUsed = null;
+    @SerializedName("publicMoney")
+        private Integer totalLeft = null;
+    @SerializedName("personalSum")
+        private DividePersonalSumData[] dividePSDList = new DividePersonalSumData;
+    private int i = 0;
 
+    public DivideData() {
+    }
+
+    public DivideData(String result, Integer publicUsed, Integer totalLeft, DividePersonalSumData[] dividePSDList, int i) {
+        this.result = result;
+        this.publicUsed = publicUsed;
+        this.totalLeft = totalLeft;
+        this.dividePSDList = dividePSDList;
+        this.i = i;
+    }
+
+    public void setName(){
+        name = dividePSDList[i].getName();
+    }
+
+
+
+
+/**
     public DivideData(String name, int personalused, int publicused, int totalLeft, int personaltotalused, int memnum) {
         this.name = name;
         this.personalused = personalused;
@@ -53,6 +84,11 @@ public class DivideData {
         String str_getpermoney = makeComma(getpermoney);
         return str_getpermoney;
     }
+ **/
+
+
+
+
 
     private String makeComma(int num){
         String str_num =Integer.toString(num);

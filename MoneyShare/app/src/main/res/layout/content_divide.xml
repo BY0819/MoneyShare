@@ -18,7 +18,7 @@
             android:id="@+id/person_img"
             android:layout_width="80dp"
             android:layout_height="80dp"
-            android:paddingLeft="16dp"
+            android:paddingLeft="15dp"
             app:srcCompat="@drawable/switch_thumb"/>
 
         <TextView
@@ -32,7 +32,7 @@
             android:layout_alignRight="@+id/person_img"
             android:layout_alignParentBottom="true"
             android:gravity="center"
-            android:paddingLeft="16dp"
+            android:paddingLeft="15dp"
             android:text="아영"
             android:textColor="@color/colorWhite"
             android:textSize="18dp"
@@ -47,7 +47,7 @@
         android:orientation="vertical"
         android:layout_weight="40"
         android:paddingLeft="88dp"
-        android:paddingRight="8dp">
+        android:paddingRight="12dp">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -106,7 +106,6 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:gravity="right"
-                        android:paddingRight="8dp"
                         android:text="2,000"
                         android:typeface="sans"/>
 
@@ -131,7 +130,6 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:gravity="right"
-                        android:paddingRight="8dp"
                         android:text="45,000"
                         android:typeface="sans"/>
 
@@ -164,7 +162,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="0.5"
-                android:layout_marginRight="15dp"
+                android:layout_marginRight="12dp"
                 android:gravity="right">
 
                 <TextView
@@ -179,7 +177,6 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:paddingRight="8dp"
                     android:textSize="20dp"
                     android:textColor="#22418f"
                     android:text="원"
