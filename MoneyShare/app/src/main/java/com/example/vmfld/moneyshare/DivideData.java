@@ -88,12 +88,20 @@ public class DivideData {
         return name;
     }
 
-    public int getMemnum() { return memnum; }
+    public int getMemnum() {
+        this.memnum = dividePSDList.length;
+        return memnum;
+    }
 
     public DividePersonalSumData[] getDPSData() { return dividePSDList; }
 
     public int getTotalleft(){
         return totalLeft;
+    }
+
+    public String getstrTotalLeft(){
+        String strTotalLeft = makeComma(totalLeft);
+        return strTotalLeft;
     }
 
 

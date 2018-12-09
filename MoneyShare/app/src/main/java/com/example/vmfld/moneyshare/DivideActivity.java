@@ -55,11 +55,18 @@ public class DivideActivity extends AppCompatActivity {
 
                  DivideListAdapter divideListAdapter = new DivideListAdapter();
 
-                 TextView str_i_totalleft = (TextView)findViewById(R.id.str_i_totalleft);
-                 str_i_totalleft.setText(response.body().getstrPublicused());
+                 DivideData divideData = response.body();
 
-                 for(int i = 0; i<response.body().getMemnum();i++){
-                     divideListAdapter.addItem(response.body().getResult(),response.body().getPublicUsed(),response.body().getTotalleft(),response.body().getDPSData(),i);
+                 TextView str_i_totalleft = (TextView)findViewById(R.id.str_i_totalleft);
+                 str_i_totalleft.setText(divideData.getstrTotalLeft());
+
+                 for(int i = 0; i<divideData.getMemnum();i++){
+                     divideListAdapter.addItem(
+                             divideData.getResult(),
+                             divideData.getPublicUsed(),
+                             divideData.getTotalleft(),
+                             divideData.getDPSData(),
+                             i);
                  }
 
                  DivideDataListView.setAdapter(divideListAdapter);
