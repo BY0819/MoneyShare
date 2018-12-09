@@ -67,11 +67,8 @@ public class DivideListAdapter  extends BaseAdapter {
 
     }
 
-    public void addItem(String name, int personalused, int publicused, int totalleft, int personaltotalused, int memnum){
-
-        DivideData divideData = new DivideData(name, personalused,publicused,totalleft,personaltotalused,memnum);
-
-        divideDataList.add(divideData);
-
+    public void addItem(String result, Integer publicUsed, Integer totalLeft, DividePersonalSumData[] dividePSDList, int i){
+        DivideData divideData = new DivideData(result,publicUsed,totalLeft,dividePSDList,i);
     }
+
 }

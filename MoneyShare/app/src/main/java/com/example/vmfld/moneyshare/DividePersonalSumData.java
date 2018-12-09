@@ -6,9 +6,10 @@ public class DividePersonalSumData {
     @SerializedName("userid")
         int userid;
     @SerializedName("sum")
-        String name;
-    @SerializedName("name")
         int personalused;
+    @SerializedName("name")
+        String name;
+
 
     public int getUserid() {
         return userid;
