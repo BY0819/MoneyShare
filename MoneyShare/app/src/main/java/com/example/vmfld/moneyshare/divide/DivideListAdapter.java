@@ -1,4 +1,4 @@
-package com.example.vmfld.moneyshare;
+package com.example.vmfld.moneyshare.divide;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -7,8 +7,9 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
 
+import com.example.vmfld.moneyshare.R;
+
 import java.util.ArrayList;
-import java.util.List;
 
 public class DivideListAdapter  extends BaseAdapter {
 

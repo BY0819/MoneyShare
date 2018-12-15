@@ -1,21 +1,14 @@
-package com.example.vmfld.moneyshare;
+package com.example.vmfld.moneyshare.divide;
 
-import android.content.Context;
-import android.support.v4.content.ContextCompat;
+import android.database.Cursor;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
-import android.view.LayoutInflater;
 import android.widget.ListView;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import com.google.gson.JsonArray;
-
-import org.w3c.dom.Text;
-
-import java.io.IOException;
+import com.example.vmfld.moneyshare.R;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -26,6 +19,8 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class DivideActivity extends AppCompatActivity {
 
     private ListView DivideDataListView;
+    private int Roomid;
+    int position;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -46,7 +41,25 @@ public class DivideActivity extends AppCompatActivity {
             .build();
 
          final DivideApi divideApi = divideretrofit.create(DivideApi.class);
-         Call<DivideData> call = divideApi.getDivideData(1);
+
+         if(getIntent() != null){
+             position = getIntent().getIntExtra("position",0);
+
+             Log.e("Room에서 넘어온 position : ",position+"");
+         }
+        final UserDbHelper userDbHelper = UserDbHelper.getsInstance(DivideActivity.this);
+
+        Cursor cursor = userDbHelper.getReadableDatabase()
+                .query(UserIdContract.RoomDataEntry.TABLE_NAME,
+                        null, null, null, null, null, null);
+
+        if(cursor != null && cursor.move(position+1)){
+            Roomid = cursor.getInt(cursor.getColumnIndexOrThrow(UserIdContract.RoomDataEntry.COLUMN_NAME_ROOM_ID));
+        }
+
+         Log.e("roomid is :", Roomid+"");
+
+         Call<DivideData> call = divideApi.getDivideData(Roomid);
          call.enqueue(new Callback<DivideData>() {
              @Override
              public void onResponse(Call<DivideData> call, Response<DivideData> response) {

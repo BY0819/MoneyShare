@@ -1,4 +1,4 @@
-package com.example.vmfld.moneyshare;
+package com.example.vmfld.moneyshare.divide;
 
 import com.google.gson.annotations.SerializedName;
 

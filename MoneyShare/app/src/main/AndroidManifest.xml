@@ -48,7 +48,7 @@
             android:label="@string/title_activity_gallery"
             android:theme="@style/AppTheme"/>
         <activity
-            android:name=".DivideActivity"
+            android:name=".divide.DivideActivity"
             android:label="@null"
             android:theme="@style/AppTheme"/>
     </application>

@@ -1,4 +1,4 @@
-package com.example.vmfld.moneyshare;
+package com.example.vmfld.moneyshare.divide;
 
 import retrofit2.Call;
 import retrofit2.http.Field;
